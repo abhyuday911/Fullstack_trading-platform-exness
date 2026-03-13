@@ -13,10 +13,11 @@ const User = () => {
     setLoggedInUser(null)
     const fetchUser = async () => {
       try {
-        const { data } = await axios.get("http://localhost:3030/api/me");
+        const { data } = await axios.get(
+          "http://localhost:3030/api/me",
+          { withCredentials: true }
+        );
         setLoggedInUser(data);
-
-        console.log("16 data", data);
       } catch (error) {
         console.log(error);
       }

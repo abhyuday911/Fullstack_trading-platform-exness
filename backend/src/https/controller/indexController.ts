@@ -168,7 +168,7 @@ export const getCandles = async (req: Request, res: Response) => {
 
 export const getUser = async (req: Request, res: Response) => {
   const token = req.cookies.token;
-  if (!token) return res.json("user not loggedin");
+  if (!token) return res.status(401).json("user not loggedin");
 
   try {
     const decoded = jwt.verify(token, JWT_KEY) as MyJwtPayload;
@@ -199,7 +199,14 @@ export const signUp = async (req: Request, res: Response) => {
     sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
   });
 
-  return res.status(201).json({ message: "User created", user });
+  return res.status(201).json({
+    message: "User created", user: {
+      email: user.email,
+      userId: user.userId,
+      balance: user.balance,
+      positions: user.positions
+    }
+  });
 };
 
 export const signIn = (req: Request, res: Response) => {

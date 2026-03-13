@@ -17,22 +17,22 @@ const BuySell = ({ latestTrade }: BuySellProps) => {
   const leverage = leverageOptions[leverageIndex];
 
   const [positions, setPositions] = useState([
-    { id: "1012", symbol: "BTC", side: "buy" as const, size: 0.015, pnl: 14.3 },
+    { id: "1012", symbol: "DogeCoin", side: "buy" as const, size: 0.015, pnl: 14.3 },
     {
       id: "1013",
-      symbol: "BTC",
+      symbol: "DogeCoin",
       side: "sell" as const,
       size: 0.008,
       pnl: -3.2,
     },
-    { id: "1017", symbol: "BTC", side: "buy" as const, size: 0.025, pnl: 27.6 },
-    { id: "1019", symbol: "BTC", side: "sell" as const, size: 0.012, pnl: 6.7 },
-    { id: "1023", symbol: "BTC", side: "buy" as const, size: 0.01, pnl: -1.5 },
-    { id: "1025", symbol: "BTC", side: "sell" as const, size: 0.05, pnl: 42.8 },
-    { id: "1030", symbol: "BTC", side: "buy" as const, size: 0.02, pnl: 18.1 },
+    { id: "1017", symbol: "DogeCoin", side: "buy" as const, size: 0.025, pnl: 27.6 },
+    { id: "1019", symbol: "DogeCoin", side: "sell" as const, size: 0.012, pnl: 6.7 },
+    { id: "1023", symbol: "DogeCoin", side: "buy" as const, size: 0.01, pnl: -1.5 },
+    { id: "1025", symbol: "DogeCoin", side: "sell" as const, size: 0.05, pnl: 42.8 },
+    { id: "1030", symbol: "DogeCoin", side: "buy" as const, size: 0.02, pnl: 18.1 },
     {
       id: "1033",
-      symbol: "BTC",
+      symbol: "DogeCoin",
       side: "sell" as const,
       size: 0.006,
       pnl: -4.4,

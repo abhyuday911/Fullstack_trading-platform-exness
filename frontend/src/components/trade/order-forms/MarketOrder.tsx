@@ -24,7 +24,7 @@ const MarketOrder = ({
   setLeverageIndex,
 }: OrderFormProps) => {
   return (
-    <div className="space-y-4 h-full">
+    <div className="space-y-4 h-full flex flex-col">
       <div className="flex justify-between text-sm text-muted-foreground">
         <span>
           Bid:{" "}
@@ -88,9 +88,10 @@ const MarketOrder = ({
           <Input id="takeProfit" placeholder="Take profit" type="number" />
         </div>
       </div>
-      <div className="grid grid-cols-2 gap-3 pt-2">
+      <div className="grid grid-cols-2 gap-3 pt-2 flex-1 items-end">
         <Button
           variant="default"
+          size={'lg'}
           className="bg-green-500 hover:bg-green-600 cursor-pointer"
         >
           Buy $
@@ -108,6 +109,7 @@ const MarketOrder = ({
         <Button
           variant="destructive"
           className="bg-red-500 hover:bg-red-600 cursor-pointer"
+          size={'lg'}
         >
           Sell $
           {latestTrade && !isNaN(Number(quantity))
